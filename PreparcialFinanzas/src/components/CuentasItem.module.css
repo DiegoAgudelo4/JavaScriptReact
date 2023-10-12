@@ -1,0 +1,33 @@
+.item{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px;
+    align-content: space-between;
+}
+.tabletr{
+    border: 1px solid black;
+}
+.nombre{
+    margin: 5px;
+    text-align: left;
+}
+.cantidad{
+    width: 30px;
+    margin: 5px;
+    border-radius: 10px;
+    min-width: 140px;
+    padding: 0px 10px;
+    color: white;
+}
+.gasto{
+    background-color: red;
+}
+.ingreso{
+    background-color: green;
+}
+.btnsIcon{
+    width: 30px;
+    margin: 5px ;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+.title{
+    background-color: gainsboro;
+    text-align: left;
+    padding: 2px;
+    border-radius: 10px 10px 0px 0px;
+}
+.formContent{
+    padding: 5px;
+    text-align: left;
+    
+}
+.btnprimary {
+    border: 1px solid black;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #0275d8;
+}
+.btnsecondary {
+    border: 1px solid black;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+}
+
+.containForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.opciones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #0275d8;
+    
+}
+
+.opcion{
+    width: 50%;
+    height: 100px;
+}
+.incorrect{
+    background-color: red;
+}
+.correct{
+    background-color: green;
+}

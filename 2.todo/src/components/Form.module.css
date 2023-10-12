@@ -1,0 +1,21 @@
+.taskInput {
+    outline: none;
+    width: 260px;
+    padding: 15px;
+    margin-right: 25px;
+    font-size: 20px;
+    color: burlywood;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid burlywood;
+}
+
+.button {
+    width: 70px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border: 0;
+    color: burlywood;
+    background-color: black;
+    border-radius: 10px;
+}
