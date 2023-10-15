@@ -17,14 +17,21 @@ const CuentasList = ({ cuenta, setCuenta, edit, setEdit }) => {
         var resultadoOpcion = cuenta;
         if (opcion != 'Todos') {
             resultadoOpcion = cuenta.filter((item) => item.tipo == opcion);
-            console.log(opcion)
         }
+        //busca por item.nombre o item.cantidad
         if (busqueda) {
-            const resultadoFiltrado = resultadoOpcion.filter((item) => item.nombre.includes(busqueda));
+            const resultadoFiltrado = resultadoOpcion.filter((item) => {
+              const buscar = busqueda.toLowerCase();
+              const buscadoNombre = item.nombre.toLowerCase();
+              const buscadoCantidad = item.cantidad.toString(); // Convierte la cantidad a una cadena
+              return (
+                buscadoNombre.includes(buscar) || buscadoCantidad.includes(buscar)
+              );
+            });
             setCuentaFiltrada(resultadoFiltrado);
-        } else {
+          } else {
             setCuentaFiltrada(resultadoOpcion);
-        }
+          }
     }, [busqueda, cuenta, opcion]);
 
     const deleteCuenta = ({ id }) => {

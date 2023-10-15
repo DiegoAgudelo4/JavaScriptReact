@@ -8,21 +8,20 @@ function App() {
   const [cuenta, setCuenta] = useState([]);
   const [saldoFinal, setsaldoFinal] = useState(0);
   const [saldoInicial, setsaldoInicial] = useState(0);
+
   const [edit,setEdit]=useState(null);
 
   const calcularSaldoFinal = cuenta.reduce((total, c) => {
-
-    if (c.tipo == "Ingreso" && cuenta) {
+    if (c.tipo === "Ingreso") {
       return parseFloat(total) + parseFloat(c.cantidad);
     } else {
       return parseFloat(total) - parseFloat(c.cantidad);
     }
-  }, saldoInicial)
-
+  }, saldoInicial === '' ? 0 : parseFloat(saldoInicial));
+  
   useEffect(() => {
-    setsaldoFinal(calcularSaldoFinal)
-  }, [cuenta, saldoInicial])
-
+    setsaldoFinal(calcularSaldoFinal);
+  }, [cuenta, saldoInicial]);
 
   return (
     <>

@@ -128,7 +128,7 @@ const FormFinanzas = ({ cuenta, setCuenta, edit, setEdit }) => {
 
               </td>
               <td>
-                {formatearNumero(values.cantidad)}
+                {values.cantidad ? formatearNumero(values.cantidad):''}
               </td>
             </tr>
           </table>
