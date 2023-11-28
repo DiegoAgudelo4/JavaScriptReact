@@ -1,0 +1,17 @@
+export const carros=[
+    [{ columna: 'A', fila: 1, ocupada: false, placa: '' }, { columna: 'B', fila: 1, ocupada: false, placa: '' }, { columna: 'C', fila: 1, ocupada: false, placa: '' }, { columna: 'D', fila: 1, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 2, ocupada: false, placa: '' }, { columna: 'B', fila: 2, ocupada: false, placa: '' }, { columna: 'C', fila: 2, ocupada: false, placa: '' }, { columna: 'D', fila: 2, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 3, ocupada: false, placa: '' }, { columna: 'B', fila: 3, ocupada: false, placa: '' }, { columna: 'C', fila: 3, ocupada: false, placa: '' }, { columna: 'D', fila: 3, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 4, ocupada: false, placa: '' }, { columna: 'B', fila: 4, ocupada: false, placa: '' }, { columna: 'C', fila: 4, ocupada: false, placa: '' }, { columna: 'D', fila: 4, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 5, ocupada: false, placa: '' }, { columna: 'B', fila: 5, ocupada: false, placa: '' }, { columna: 'C', fila: 5, ocupada: false, placa: '' }, { columna: 'D', fila: 5, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 6, ocupada: false, placa: '' }, { columna: 'B', fila: 6, ocupada: false, placa: '' }, { columna: 'C', fila: 6, ocupada: false, placa: '' }, { columna: 'D', fila: 6, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 7, ocupada: false, placa: '' }, { columna: 'B', fila: 7, ocupada: false, placa: '' }, { columna: 'C', fila: 7, ocupada: false, placa: '' }, { columna: 'D', fila: 7, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 8, ocupada: false, placa: '' }, { columna: 'B', fila: 8, ocupada: false, placa: '' }, { columna: 'C', fila: 8, ocupada: false, placa: '' }, { columna: 'D', fila: 8, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 9, ocupada: false, placa: '' }, { columna: 'B', fila: 9, ocupada: false, placa: '' }, { columna: 'C', fila: 9, ocupada: false, placa: '' }, { columna: 'D', fila: 9, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 10, ocupada: false, placa: '' }, { columna: 'B', fila: 10, ocupada: false, placa: '' }, { columna: 'C', fila: 10, ocupada: false, placa: '' }, { columna: 'D', fila: 10, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 11, ocupada: false, placa: '' }, { columna: 'B', fila: 11, ocupada: false, placa: '' }, { columna: 'C', fila: 11, ocupada: false, placa: '' }, { columna: 'D', fila: 11, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 12, ocupada: false, placa: '' }, { columna: 'B', fila: 12, ocupada: false, placa: '' }, { columna: 'C', fila: 12, ocupada: false, placa: '' }, { columna: 'D', fila: 12, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 13, ocupada: false, placa: '' }, { columna: 'B', fila: 13, ocupada: false, placa: '' }, { columna: 'C', fila: 13, ocupada: false, placa: '' }, { columna: 'D', fila: 13, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 14, ocupada: false, placa: '' }, { columna: 'B', fila: 14, ocupada: false, placa: '' }, { columna: 'C', fila: 14, ocupada: false, placa: '' }, { columna: 'D', fila: 14, ocupada: false, placa: '' }],
+    [{ columna: 'A', fila: 15, ocupada: false, placa: '' }, { columna: 'B', fila: 15, ocupada: false, placa: '' }, { columna: 'C', fila: 15, ocupada: false, placa: '' }, { columna: 'D', fila: 15, ocupada: false, placa: '' }],
+]

@@ -3,7 +3,7 @@ import uuid4 from 'uuid4';
 import style from './FormFinanzas.module.css';
 import numeral from 'numeral';
 
-const FormFinanzas = ({ cuenta, setCuenta, edit, setEdit }) => {
+const FormFinanzas = ({ cuenta, setCuenta, edit, setEdit, saldoFinal }) => {
 
   const formatearNumero = (numero) => {
     return numeral(numero).format('0,0.00');
@@ -21,14 +21,20 @@ const FormFinanzas = ({ cuenta, setCuenta, edit, setEdit }) => {
     if (edit) {
       editCuenta(edit);
     } else {
-      const newCuenta = {
-        id: uuid4(),
-        tipo: values.tipo
-        , nombre: values.nombre
-        , cantidad: values.cantidad
+      if(values.cantidad>saldoFinal && values.tipo=="Gasto"){
+        console.log("Saldo insuficiente");  
+        limpiarForm();
+      }else{
+        const newCuenta = {
+          id: uuid4(),
+          tipo: values.tipo
+          , nombre: values.nombre
+          , cantidad: values.cantidad
+        }
+        setCuenta([...cuenta, newCuenta]);
+        limpiarForm();
       }
-      setCuenta([...cuenta, newCuenta]);
-      limpiarForm();
+      
     };
   };
   const editCuenta = (edit) => {

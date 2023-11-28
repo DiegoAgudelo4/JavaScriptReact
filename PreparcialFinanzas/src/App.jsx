@@ -41,7 +41,7 @@ function App() {
               setCuenta={setCuenta}
               edit={edit}
               setEdit={setEdit}
-              
+              saldoFinal={saldoFinal}
             />
           </div>
           <div className={style.cuentasList}>
