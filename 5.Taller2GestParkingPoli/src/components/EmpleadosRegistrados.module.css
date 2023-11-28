@@ -7,3 +7,33 @@
     border-radius: '8px';
     background-color: antiquewhite;
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    background-color: gainsboro;
+    border-radius: 10px 10px 0px 0px;
+}
+.cantidad{
+    background-color: #0275d8;
+    border-radius: 20px;
+    padding: 0px 10px 0px;
+}
+.table{
+    margin: 30px 10px;
+    border-collapse: collapse;
+    min-width: 80%;
+}
+.containtable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.busqueda{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.inputText{
+    border-radius: 5px ;
+}

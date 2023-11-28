@@ -4,10 +4,10 @@ import style from './EmpleadosRegistrados.module.css'
 const EmpleadosRegistrados = () => {
     return (
         <div className={style.container}>
-            <div >
+            <div className={style.header}>
                 <h2>Empleados Registrados</h2>
             </div>
-            <div >
+            <div className={style.busqueda}>
                 Buscar:
                 <input
                     type="text"

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import style from './ParkingOption.module.css'
-import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 const ParkingOption = () => {
   const [motos, setMotos] = useState([]);
@@ -41,14 +40,12 @@ const ParkingOption = () => {
   return (
     <div className={style.container}>
       <h2>Parqueadero de Motos</h2>
-      <Button onClick={handleMotos}>Ir al Parqueadero de Motos</Button>
       <div>
         <p>Disponibles: {motos.disponibles}</p>
         <p>Ocupados: {motos.ocupados}</p>
       </div>
 
       <h2>Parqueadero de Carros</h2>
-      <Button onClick={handleCarros}>Ir al Parqueadero de Carros</Button>
       <div>
         <p>Disponibles: {carros.disponibles}</p>
         <p>Ocupados: {carros.ocupados}</p>

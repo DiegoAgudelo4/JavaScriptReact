@@ -8,7 +8,7 @@ export const CarrosProvider = ({ children }) => {
   const [disponibles, setDisponibles] = useState(0);
 
   useEffect(() => {
-    const disponibles = flattenedCarros.filter(carro => carro.ocupada === false).length;
+    const disponibles = carrosData.filter(carro => carro.ocupada === false).length;
     setDisponibles(disponibles);
   },[])
   

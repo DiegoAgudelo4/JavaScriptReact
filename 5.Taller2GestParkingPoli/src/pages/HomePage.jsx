@@ -8,10 +8,14 @@ const HomePage = () => {
     const handleLogin = () => {
         navigate("/Login", { replace: true });
     }
+    const handleInvitado= ()=>{
+        navigate("/Dashboard", { replace: true });
+    }
     return (
         <>
 
-            <Button variant="primary" onClick={handleLogin}>Entrar</Button>
+            <Button variant="primary" onClick={handleLogin}>Iniciar sesion</Button>
+            <Button variant="primary" onClick={handleInvitado}>Entrar como invitado</Button>
             <header>
                 <h1>Descripción del Proyecto</h1>
             </header>

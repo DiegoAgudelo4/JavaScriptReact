@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { CarrosProvider } from '../context/CarrosContext';
+import React, { useContext, useState } from 'react'
+import { useCarros } from '../context/CarrosContext';
 
 
 const ParkingCarros = () => {
@@ -37,7 +37,6 @@ const ParkingCarros = () => {
     }
 
     return (
-        <CarrosProvider>
             <div>
                 <h2>Parqueadero de los almendros</h2>
                 <table>
@@ -77,7 +76,6 @@ const ParkingCarros = () => {
                     </tbody>
                 </table>
             </div>
-        </CarrosProvider>
     );
 }
 

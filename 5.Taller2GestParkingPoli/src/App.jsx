@@ -6,9 +6,8 @@ import DashBoard from './pages/DashBoard';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext';
-import ParkingCarros from './pages/ParkingCarros';
-import ParkingMotos from './pages/ParkingMotos';
-import { CarrosProvider } from './context/CarrosContext';
+
+
 
 function App() {
 
@@ -20,8 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Dashboard" element={<DashBoard />} />
-            <Route path="/Carros" element={<ParkingCarros />} />
-            <Route path="/Motos" element={<ParkingMotos />} />
+
           </Routes>
         </BrowserRouter>
       </AuthProvider>
