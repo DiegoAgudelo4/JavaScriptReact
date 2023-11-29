@@ -1,9 +1,13 @@
 .container{
     width: 700px;
-    margin: auto;
+    height: 100%;
     text-align: center;
     padding: '20px';
     border: '1px solid #ccc';
     border-radius: '8px';
-    background-color: antiquewhite;
+    background-color: #FFFFFF;
+    margin: 10px;
+    border: 1px solid black;
+    color: #555555;
+    align-self: stretch;
 }

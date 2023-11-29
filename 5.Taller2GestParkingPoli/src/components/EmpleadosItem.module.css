@@ -1,6 +1,31 @@
 tr{
-    border: 1px solid;
+    border: 1px solid black;
 }
+td{
+  border: 1px solid black;
+}
+
 .accion{
     margin: 3px;
 }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Color del texto */
+  }
+  .buttongreen {
+    /* Estilo específico para el fondo verde */
+    background-color: forestgreen;
+  }
+  .button:hover {
+    /* Estilo para hover */
+    opacity: 0.8;
+    /* Otros estilos de hover según tus preferencias */
+  }
+  

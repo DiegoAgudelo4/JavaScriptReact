@@ -34,13 +34,13 @@ const NavBar = ({ showParkinCarros, setShowParkinCarros, setShowParkinMotos, sho
   return (
     <Navbar expand="lg" className={style.container}>
       <Container>
-        <Navbar.Brand href="">ParkingPoli</Navbar.Brand>
+        <Navbar.Brand href="" className={style.titulo}>ParkingPoli</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className={style.opciones}>
           <Nav className="me-auto">
             {authenticated && <>
               <NavDropdown title="Parqueaderos" id="basic-nav-dropdown">
-                <NavDropdown.Item href="" onClick={handleParkCarros}>Parqueadero Carros</NavDropdown.Item>
+                <NavDropdown.Item href="" onClick={handleParkCarros}>Parqueadero carros</NavDropdown.Item>
                 <NavDropdown.Item href="" onClick={handleParkMotos}>
                   Parqueaderos motos
                 </NavDropdown.Item>

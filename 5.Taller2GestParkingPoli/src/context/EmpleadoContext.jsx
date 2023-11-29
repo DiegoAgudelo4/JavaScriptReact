@@ -5,14 +5,7 @@ const EmpleadosContext=createContext();
 
 export const EmpleadosProvider=({children})=>{
     const [empleadosData, setEmpleadosData] = useState(empleados);
-    useEffect(() => {
-        // Esta función se ejecutará después de cada actualización de empleadosData
-        // Aquí puedes realizar la operación de escritura en dataEmpleados.js
-      
-        // Ejemplo: escribir en el archivo dataEmpleados.js (esta es una operación ficticia)
-        // updateDataEmpleados(empleadosData);
-        console.log(empleadosData)
-      }, [empleadosData]); 
+
     const agregarEmpleado = (nuevoEmpleado) => {
         // Copia el array existente para no modificar el estado directamente
         const nuevoArrayEmpleados = [...empleadosData];

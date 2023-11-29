@@ -23,18 +23,14 @@ const Login = () => {
         // Aquí puedes agregar lógica para validar el usuario y contraseña
         // Puedes comparar con valores por defecto o utilizar una lógica más avanzada
 
-        console.log('Username:', username);
-        console.log('Password:', password);
         const usuarioValido = usuarios.find(u => u.user === username && u.pass === password);
 
 
         if (usuarioValido) {
-            console.log('Inicio de sesión exitoso');
             setAuthenticated(true);
             navigate("/DashBoard", { replace: true });
             // Puedes redirigir a otra página o realizar otras acciones aquí
         } else {
-            console.log('Usuario o contraseña incorrectos');
             setfail(true)
             // Puedes mostrar un mensaje de error o realizar otras acciones aquí
         }

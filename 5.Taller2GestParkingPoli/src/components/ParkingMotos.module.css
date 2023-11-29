@@ -3,16 +3,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 .table, .th, .td {
     border: 1px solid black;
     border-collapse: collapse;
-
   }
 .th{
     padding:10px;
 }
 .td{
     padding: 10px;
+}
+.celda{
+    width: 30px;
+    height: 70px;
+    cursor: pointer;
+}
+.ocupada{
+    background-color: #FFD301;
+}
+.libre{
+    background-color: forestgreen;
 }

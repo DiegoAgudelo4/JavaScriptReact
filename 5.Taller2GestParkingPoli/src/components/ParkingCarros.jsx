@@ -35,7 +35,6 @@ const ParkingCarros = ({ numeroPlacaSeleccionada, setNumeroPlacaSeleccionada, se
                             break;
                         }
                         for (let j = 0; j < carrosData[i].length; j++) {
-                            console.log(carrosData[i][j].placa+" ==?"+numeroPlacaSeleccionada.numeroPlaca)
                             if (carrosData[i][j].placa===numeroPlacaSeleccionada.numeroPlaca) {
                                 encontrado = true
                                 
@@ -47,11 +46,8 @@ const ParkingCarros = ({ numeroPlacaSeleccionada, setNumeroPlacaSeleccionada, se
                         const nuevasCeldas = [...carrosData];
                         nuevasCeldas[filaIndex][celdaIndex].ocupada = !nuevasCeldas[filaIndex][celdaIndex].ocupada;
                         nuevasCeldas[filaIndex][celdaIndex].placa = numeroPlacaSeleccionada.numeroPlaca
-                        console.log("fila: " + filaIndex + " columna: " + celdaIndex)
-                        console.log(numeroPlacaSeleccionada)
                         setCarrosData(nuevasCeldas);
                         setNumeroPlacaSeleccionada({})
-                        console.log(nuevasCeldas)
 
                     } else {
                         seterror(1);
@@ -71,11 +67,8 @@ const ParkingCarros = ({ numeroPlacaSeleccionada, setNumeroPlacaSeleccionada, se
         const nuevasCeldas = [...carrosData];
         nuevasCeldas[filaIndex][celdaIndex].ocupada = !nuevasCeldas[filaIndex][celdaIndex].ocupada;
         nuevasCeldas[filaIndex][celdaIndex].placa = numeroPlacaSeleccionada.numeroPlaca
-        console.log("fila: " + filaIndex + " columna: " + celdaIndex)
-        console.log(numeroPlacaSeleccionada)
         setCarrosData(nuevasCeldas);
         setNumeroPlacaSeleccionada({})
-        console.log(nuevasCeldas)
         setConfirmacion((prevConfirmacion) => ({
             ...prevConfirmacion,
             mostrar: false,
@@ -87,9 +80,6 @@ const ParkingCarros = ({ numeroPlacaSeleccionada, setNumeroPlacaSeleccionada, se
             mostrar: false,
         }));
     }
-    useEffect(() => {
-        console.log(confirmacion, ubicacion)
-    }, [confirmacion])
 
     useEffect(() => {
         seterror('')
@@ -129,13 +119,8 @@ const ParkingCarros = ({ numeroPlacaSeleccionada, setNumeroPlacaSeleccionada, se
                                 <td
                                     key={celdaIndex}
                                     onClick={() => toggleDisponibilidad(filaIndex, celdaIndex)}
-                                    style={{
-                                        width: '100px',
-                                        height: '100px',
-                                        backgroundColor: celda.ocupada ? 'red' : 'green',
-                                        cursor: 'pointer'
-                                    }}
-                                    className={style.td}
+                                    className={`${style.td} ${style.celda} ${celda.ocupada ? style.ocupada:style.libre}`}
+                                    
                                 >
                                     {celda.ocupada ? (
                                         <div>

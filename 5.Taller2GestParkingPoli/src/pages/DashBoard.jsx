@@ -16,8 +16,8 @@ import style from './Dashboard.module.css'
 import ParkingMotos from '../components/ParkingMotos';
 const DashBoard = () => {
   const { authenticated, setAuthenticated } = useAuth();
-  const [showParkinMotos, setShowParkinMotos] = useState(false)
-  const [showParkinCarros, setShowParkinCarros] = useState(false)
+  const [showParkinMotos, setShowParkinMotos] = useState(true)
+  const [showParkinCarros, setShowParkinCarros] = useState(true)
   const [numeroPlacaSeleccionada, setNumeroPlacaSeleccionada] = useState({});
   const [carros, setCarros] = useState({})
   const [motos, setMotos] = useState({})
@@ -32,6 +32,20 @@ const DashBoard = () => {
     }
   }, [numeroPlacaSeleccionada])
 
+  useEffect(() => {
+    if(showParkinMotos){
+      setShowParkinCarros(false)
+    }else if(showParkinCarros){
+      setShowParkinMotos(false)
+    }
+  }, [showParkinMotos,showParkinCarros])
+  
+  useEffect(() => {
+    setShowParkinMotos(false)
+    setShowParkinCarros(false)
+    console.log("Usefect inicial")
+  }, [])
+  
   return (
     <>
       <NavBar

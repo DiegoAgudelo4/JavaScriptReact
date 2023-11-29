@@ -13,6 +13,7 @@ const FormEmpleado = () => {
   const [modelo, setModelo] = useState('');
   const [cilindraje, setCilindraje] = useState('');
   const [error, setError] = useState('');
+  const [color, setColor] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +43,7 @@ const FormEmpleado = () => {
         marca,
         cilindraje: tipoVehiculo === 'moto' ? cilindraje : undefined,
         modelo: tipoVehiculo === 'carro' ? modelo : undefined,
+        color: color
       };
 
       setEmpleadosData((prevEmpleadosData) => {
@@ -63,6 +65,7 @@ const FormEmpleado = () => {
             marca,
             cilindraje: tipoVehiculo === 'moto' ? cilindraje : undefined,
             modelo: tipoVehiculo === 'carro' ? modelo : undefined,
+            color: color
           },
         ],
       };
@@ -107,6 +110,19 @@ const FormEmpleado = () => {
           id="numeroPlaca"
           value={numeroPlaca}
           onChange={(e) => setNumeroPlaca(e.target.value)}
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="color" className="form-label">
+          Color de Vehículo:
+        </label>
+        <br />
+        <input
+          type="text"
+          className="form-control"
+          id="colorVehiculo"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
         />
       </div>
       <div className="mb-3">

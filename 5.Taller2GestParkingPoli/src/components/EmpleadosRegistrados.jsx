@@ -24,9 +24,9 @@ const EmpleadosRegistrados = ({ setNumeroPlacaSeleccionada, setAuthenticated }) 
       if (opciones === 'todos') {
         return coincideBusqueda;
       } else {
-        return empleado.vehiculos.some((item) => item.tipo == opciones);
+        return empleado.vehiculos.some((item) => item.tipo == opciones && coincideBusqueda);
       }
-    }).slice(0, 5);
+    }).slice(0, 2);
 
   };
   useEffect(() => {
@@ -90,6 +90,7 @@ const EmpleadosRegistrados = ({ setNumeroPlacaSeleccionada, setAuthenticated }) 
               <th>Número de Placa</th>
               <th>Marca</th>
               <th>Tipo</th>
+              <th>color</th>
               <th>Accion</th>
             </tr>}
             {empleadoFiltrado.length == 0 &&

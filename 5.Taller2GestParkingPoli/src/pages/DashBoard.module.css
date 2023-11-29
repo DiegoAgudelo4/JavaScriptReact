@@ -3,4 +3,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: forestgreen;
+
+}
+.containPaneles{
+    background-color: darkgreen;
 }

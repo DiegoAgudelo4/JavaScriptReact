@@ -16,3 +16,14 @@
 .td{
     padding: 10px;
 }
+.celda{
+    width: 50px;
+    height: 70px;
+    cursor: pointer;
+}
+.ocupada{
+    background-color: #FFD301;
+}
+.libre{
+    background-color: forestgreen;
+}

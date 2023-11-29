@@ -11,10 +11,10 @@ const EmpleadosItem = ({ empleado, setNumeroPlacaSeleccionada }) => {
 
   return (
     <tr className={style.tr}>
-      <td >{cedula}</td>
-      <td>
+      <td>{cedula}</td>
+      <td >
         {vehiculos.map((vehiculo, index) => (
-          <div key={index}>{vehiculo.numeroPlaca}</div>
+          <div className={style.div} key={index}>{vehiculo.numeroPlaca}</div>
         ))}
       </td>
       <td>
@@ -29,9 +29,15 @@ const EmpleadosItem = ({ empleado, setNumeroPlacaSeleccionada }) => {
       </td>
       <td>
         {vehiculos.map((vehiculo, index) => (
+          <div key={index}>{vehiculo.color}</div>
+        ))}
+      </td>
+      <td>
+        {vehiculos.map((vehiculo, index) => (
           <div key={index} className={style.accion}>
             {/* Agregar un botón con el evento onClick para manejar la acción */}
-            <button onClick={() => handleClick(vehiculo.numeroPlaca, vehiculo.tipo)}>
+            <button className={`${style.button} ${style.buttongreen} `} 
+                    onClick={() => handleClick(vehiculo.numeroPlaca, vehiculo.tipo)}>
               seleccionar
             </button>
           </div>
