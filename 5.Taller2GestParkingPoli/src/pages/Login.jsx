@@ -84,8 +84,8 @@ const Login = () => {
 
                     </Form.Group>
                 </Form>
-                <Button variant="primary" onClick={handleLogin}>Iniciar sesión</Button>
-                <Button variant="primary" onClick={handleBack}>Volver</Button>
+                <Button variant="primary" onClick={handleLogin} className={style.boton}>Iniciar sesión</Button>
+                <Button variant="primary" onClick={handleBack} className={style.boton}>Volver</Button>
             </div>
         </div>
         </>

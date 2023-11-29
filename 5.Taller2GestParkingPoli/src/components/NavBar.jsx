@@ -10,8 +10,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+//estilos
+import style from './NavBar.module.css';
 
-const NavBar = ({ showParkinCarros, setShowParkinCarros, setShowParkinMotos, ShowParkinMotos, authenticated }) => {
+
+const NavBar = ({ showParkinCarros, setShowParkinCarros, setShowParkinMotos, showParkinMotos, authenticated }) => {
   const { setAuthenticated } = useAuth();
   const navigate = useNavigate();
 
@@ -19,27 +22,36 @@ const NavBar = ({ showParkinCarros, setShowParkinCarros, setShowParkinMotos, Sho
     setAuthenticated(false)
     navigate("/", { replace: true });
   }
-  const handleParqueaderos = () => {
+  const handleParkCarros = () => {
     setShowParkinCarros(!showParkinCarros)
   }
+  const handleParkMotos=()=>{
+    setShowParkinMotos(!showParkinMotos)
+  }
+  const handleIniciarSesion =()=>{
+    navigate("/login", { replace: true });
+  }
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={style.container}>
       <Container>
-        <Navbar.Brand href="#home">ParkingPoli</Navbar.Brand>
+        <Navbar.Brand href="">ParkingPoli</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {authenticated &&
+            {authenticated && <>
               <NavDropdown title="Parqueaderos" id="basic-nav-dropdown">
-                <NavDropdown.Item href="" onClick={handleParqueaderos}>Parqueadero Carros</NavDropdown.Item>
-                <NavDropdown.Item href="">
+                <NavDropdown.Item href="" onClick={handleParkCarros}>Parqueadero Carros</NavDropdown.Item>
+                <NavDropdown.Item href="" onClick={handleParkMotos}>
                   Parqueaderos motos
                 </NavDropdown.Item>
               </NavDropdown>
+              
+            </>
             }
-
-
-            <Nav.Link href="" onClick={handleSalir}>Salir</Nav.Link>
+            {!authenticated &&
+             <Nav.Link href="" onClick={handleIniciarSesion}>Iniciar Sesion</Nav.Link>
+            }
+          <Nav.Link href="" onClick={handleSalir}>Salir</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

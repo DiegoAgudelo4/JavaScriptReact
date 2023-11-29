@@ -1,4 +1,4 @@
-export const carros=[
+export var carros=[
     [{ columna: 'A', fila: 1, ocupada: false, placa: '' }, { columna: 'B', fila: 1, ocupada: false, placa: '' }, { columna: 'C', fila: 1, ocupada: false, placa: '' }, { columna: 'D', fila: 1, ocupada: false, placa: '' }],
     [{ columna: 'A', fila: 2, ocupada: false, placa: '' }, { columna: 'B', fila: 2, ocupada: false, placa: '' }, { columna: 'C', fila: 2, ocupada: false, placa: '' }, { columna: 'D', fila: 2, ocupada: false, placa: '' }],
     [{ columna: 'A', fila: 3, ocupada: false, placa: '' }, { columna: 'B', fila: 3, ocupada: false, placa: '' }, { columna: 'C', fila: 3, ocupada: false, placa: '' }, { columna: 'D', fila: 3, ocupada: false, placa: '' }],

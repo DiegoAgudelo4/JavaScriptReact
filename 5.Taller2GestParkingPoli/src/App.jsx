@@ -6,6 +6,7 @@ import DashBoard from './pages/DashBoard';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext';
+import { EmpleadosProvider } from './context/EmpleadoContext';
 
 
 
@@ -13,16 +14,18 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Dashboard" element={<DashBoard />} />
+      <EmpleadosProvider>
+        <AuthProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Dashboard" element={<DashBoard />} />
 
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
+      </EmpleadosProvider>
     </>
     /*
     <Route path="/dashboard/*" element={<DashBoard />}>

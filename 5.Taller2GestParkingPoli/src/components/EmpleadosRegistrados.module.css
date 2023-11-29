@@ -37,3 +37,9 @@
 .inputText{
     border-radius: 5px ;
 }
+.containTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

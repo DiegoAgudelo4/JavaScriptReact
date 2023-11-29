@@ -1,21 +1,24 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
-import NavBar from '../components/NavBar';
+//estilos
+import style from './HomePage.module.css';
 
 const HomePage = () => {
     const navigate = useNavigate();
     const handleLogin = () => {
         navigate("/Login", { replace: true });
     }
-    const handleInvitado= ()=>{
+    const handleInvitado = () => {
         navigate("/Dashboard", { replace: true });
     }
     return (
-        <>
-
-            <Button variant="primary" onClick={handleLogin}>Iniciar sesion</Button>
-            <Button variant="primary" onClick={handleInvitado}>Entrar como invitado</Button>
+        <div className={style.body}>
+            <h1>ParkingPoli</h1>
+            <div className={style.botones}>
+                <Button variant="primary" onClick={handleLogin} className={style.boton}>Iniciar sesion</Button>
+                <Button variant="primary" onClick={handleInvitado} className={style.boton}>Entrar como invitado</Button>
+            </div>
             <header>
                 <h1>Descripción del Proyecto</h1>
             </header>
@@ -66,7 +69,7 @@ const HomePage = () => {
                     <li>Fecha socialización: 29 noviembre</li>
                 </ul>
             </main>
-        </>
+        </div>
 
     )
 }
